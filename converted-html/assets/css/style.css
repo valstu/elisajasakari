@@ -5120,6 +5120,7 @@ h1 .big {
   background-image: url("../images/nauha_musta.png");
   left: 50%;
   margin-top: 30px;
+  margin-bottom: 20px;
   top: 0px;
   width: 415px;
   height: 52px;
@@ -5128,6 +5129,7 @@ h1 .big {
 .liehu {
   text-transform: uppercase;
   font-weight: 800;
+  margin-top: 12px;
   color: #fff; }
 
 .liehu_vanha {
@@ -5186,10 +5188,6 @@ h1 .big {
   height: 29px;
   display: inline-block; }
 
-.my-simple-gallery img {
-  width: 100%;
-  height: auto; }
-
 .my-simple-gallery figure {
   display: block;
   float: left;
@@ -5197,4 +5195,27 @@ h1 .big {
 
 .my-simple-gallery figcaption {
   display: none; }
+
+.my-simple-gallery img {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  max-width: 100%; }
+
+.my-simple-gallery .portrait img {
+  max-width: none;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
+a.photo-link {
+  float: left;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative; }
+
 
