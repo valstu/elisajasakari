@@ -9,10 +9,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         {{ "style.css" | asset_url | stylesheet_tag }}
-        <link rel="stylesheet" href="../bower_components/photoswipe/dist/photoswipe.css">
-        <link rel="stylesheet" href="../bower_components/photoswipe/dist/default-skin/default-skin.css">
-        <script type="text/javascript" src="../bower_components/photoswipe/dist/photoswipe.js"></script>
-        <script type="text/javascript" src="../bower_components/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+        {{ "bower_components/photoswipe/dist/photoswipe.css" | asset_url | stylesheet_tag }}
+        {{ "bower_components/photoswipe/dist/defaylt-skin/default-skin.css" | asset_url | stylesheet_tag }}
+        {{ "bower_components/photoswipe/dist/photoswipe.js" | asset_url | script_tag }}
+        {{ "bower_components/photoswipe/dist/photoswipe-ui-default.min.js" | asset_url | script_tag }}
     </head>
     <body>
     <!--[if lt IE 10]>
