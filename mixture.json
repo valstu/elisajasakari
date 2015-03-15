@@ -9,7 +9,7 @@
     ]
   },
   "convertHtml": {
-    "relativePaths": false
+    "relativePaths": true
   },
   "debug": false,
   "domain": null,
@@ -20,8 +20,8 @@
   ],
   "preprocessorScriptOutput": "assets/js",
   "preprocessorStyleOutput": "assets/css",
-  "projectDescription": "Sass-Bootstrap based start",
-  "projectName": "Sass-Bootstrap",
+  "projectDescription": "Elisa ja Sakari wedding site",
+  "projectName": "elisajasakari.com",
   "publishedId": null,
   "serverHostname": null,
   "serverPort": null,
