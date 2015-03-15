@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <!-- Title block allowing child pages to override -->
+        <meta name="robots" content="noindex, nofollow">
         <title>{% block title %}Elisajasakari.com{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
@@ -13,6 +14,8 @@
         {{ "default-skin/default-skin.css" | asset_url | stylesheet_tag }}
         {{ "photoswipe.js" | asset_url | script_tag }}
         {{ "photoswipe-ui-default.min.js" | asset_url | script_tag }}
+        <script src="//use.typekit.net/nzw7pvl.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
     </head>
     <body>
     <!--[if lt IE 10]>
