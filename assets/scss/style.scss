@@ -139,14 +139,16 @@ h1 .big {
 }
 
 .liehu-image {
-    background-image: url('../images/nauha_musta.png');
-    left: 50%;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    top: 0px;
-    width: 415px;
-    height: 52px;
-    display: inline-block;
+    @media (min-width: $screen-sm) {
+        background-image: url('../images/nauha_musta.png');
+        left: 50%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        top: 0px;
+        width: 415px;
+        height: 52px;
+        display: inline-block;
+    }
 }
 
 .liehu {
@@ -154,6 +156,14 @@ h1 .big {
     font-weight: 800;
     margin-top: 12px;
     color: #fff;
+    background: black;
+    display: inline-block;
+    padding: 5px 10px;
+    @media (min-width: $screen-sm) {
+        display: block;
+        padding: 0;
+        background: transparent;
+    }
 }
 
 .liehu_vanha {
