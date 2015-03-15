@@ -9,10 +9,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         {{ "style.css" | asset_url | stylesheet_tag }}
-        {{ "bower_components/photoswipe/dist/photoswipe.css" | asset_url | stylesheet_tag }}
-        {{ "bower_components/photoswipe/dist/defaylt-skin/default-skin.css" | asset_url | stylesheet_tag }}
-        {{ "bower_components/photoswipe/dist/photoswipe.js" | asset_url | script_tag }}
-        {{ "bower_components/photoswipe/dist/photoswipe-ui-default.min.js" | asset_url | script_tag }}
+        {{ "photoswipe.css" | asset_url | stylesheet_tag }}
+        {{ "default-skin/default-skin.css" | asset_url | stylesheet_tag }}
+        {{ "photoswipe.js" | asset_url | script_tag }}
+        {{ "photoswipe-ui-default.min.js" | asset_url | script_tag }}
     </head>
     <body>
     <!--[if lt IE 10]>
@@ -33,7 +33,7 @@
 
 
 
-    <script type="text/javascript" src="../bower_components/skrollr/src/skrollr.js"></script>
+    {{ "scrollr.min.js" | asset_url | script_tag }}
     <script type="text/javascript">
     if ($(window).width() > 800) {
       var s = skrollr.init({
