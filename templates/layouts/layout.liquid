@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Title block allowing child pages to override -->
+        <title>{% block title %}Empty{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <!-- Styles -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        {{ "style.css" | asset_url | stylesheet_tag }}
+        <link rel="stylesheet" href="../bower_components/photoswipe/dist/photoswipe.css">
+        <link rel="stylesheet" href="../bower_components/photoswipe/dist/default-skin/default-skin.css">
+        <script type="text/javascript" src="../bower_components/photoswipe/dist/photoswipe.js"></script>
+        <script type="text/javascript" src="../bower_components/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+    </head>
+    <body>
+    <!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    {% block content %}{% endblock %}
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+
+
+    <script type="text/javascript" src="../bower_components/skrollr/src/skrollr.js"></script>
+    <script type="text/javascript">
+    if ($(window).width() > 800) {
+      var s = skrollr.init({
+        smoothScrolling: true,
+        mobileCheck: function(){
+          return false;
+        }
+      });
+    };
+    </script>
+    {{ "main.js" | asset_url | script_tag }}
+    {{ "bootstrap.min.js" | asset_url | script_tag }}
+    
+    {% include "photoswipe" %}
+    </body>
+</html>

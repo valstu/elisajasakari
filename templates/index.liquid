@@ -1,0 +1,89 @@
+{% block content %}
+
+<div class="mainphoto" >
+      <div class="nauha"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <div class="main-text" data-anchor-target=".mainphoto" data-start="transform: translate3d(0px, 0px, 0px);opacity:1;" data-top-bottom="transform: translate3d(0px, -200px, 0px);opacity:0;">
+              <h1><span class="big">Elisa</span> <span class="curly">&</span> <span class="big">Sakari</span></h1>
+              <h2 class="curlydate">3.5.2014</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="main-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-10 col-md-push-1  text-center">
+            <h2 class="liehu">Kiitos – <span class="eng-heading">Thank you</span></h2>
+            <p>Hääpäivä on lyhyt, mutta sen muisto on ikuinen. 
+Kiitos, että olitte osana molempia!</p>
+            <p><span class="eng-bodytext">Wedding day is short but memories last forever. 
+Thank you for being part of it!</span></p>
+            
+
+            <div class="breathe"></div>
+            <div class="liehu-image"><h2 class="liehu">Tietovisa – <span class="eng-heading">Quiz</span></h2></div>
+
+            <p>LVoittajajoukkue on Laura, Jussi, Riina, Joni, Makke ja Ville pisteillä 0,5/10,5", onnea! 
+Valitettavasti palkinnon lunastitte jo “pienissä häissä”, mutta arvostamme erinomaista tietämystänne!</p>
+            <p>Katso oikeat vastaukset <a href="../assets/images/ElisaSakari_tietovisa_vastaukset.pdf" download  target="_blank">täältä (PDF)</a>!</p>
+
+             <div class="breathe"></div>
+            <p class="eng-bodytext">The winners are Laura, Jussi, Riina, Joni, Makke ja Ville with 10,5/10,5", congratulations! Unfortunately the prize was drunk at the wedding but we applaud your superior knowledge!</p>
+            <p class="eng-bodytext">See the correct answers <a href="../assets/images/ElisaSakari_quiz_answers.pdf" download  target="_blank">here (PDF)</a>!</p>
+            
+
+            <div class="breathe"></div>
+            <h2 class="liehu">Kuvia – <span class="eng-heading">Photos</span></h2>
+            <p>Alla olevat upeat hääkuvamme on ottanut Andria Lindquist.
+            <br> Katso myös <a href="http://clients.tuomasmikkonen.com/elisasakarigallery" target="_blank">Tuomas Mikkosen</a> kuvat. Salasanan löydät kiitoskortista.</p>
+            <p>Mikäli käytät kuvia, lisää kuvien yhteyteen kyseisen kuvaajan nimi. Kiitos!</p>
+
+            <div class="breathe"></div>
+            <p class="eng-bodytext">Below are beautiful wedding photos taken by Andria Lindquist.
+            <br>Enjoy also photos by <a href="http://clients.tuomasmikkonen.com/elisasakarigallery" target="_blank">Tuomas Mikkonen</a>. You'll find the password from Thank you card.</p>
+            <p class="eng-bodytext">If you use these photos, please include photographer’s name. Thanks!</p>
+            
+            <div class="breathe"></div>
+            <p>© Andria Lindquist 2014:</p>
+
+
+            <div class="breathe"></div>
+          <div class="end-text">
+              <h2 class="heading-2">Kiitos tuhannesti! <br><span class="eng-heading-2">Thank you!</span></h2>
+              <div class="heart-image"></div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="container">
+
+          <div class="my-simple-gallery row" itemscope itemtype="http://schema.org/ImageGallery">
+        
+    
+		        {% for photo in model.resources %}
+	            
+	              <figure itemprop="associatedMedia" class="col-xs-3 col-sm-2 col-md-1" itemscope itemtype="http://schema.org/ImageObject">
+
+	                <a href="{{ photo.url }}" itemprop="contentUrl" data-size="{{ photo.width }}x{{ photo.height }}" class="photo-link {% if photo.width > photo.height %}landscape{%else%}portrait{%endif%}">
+	                    <img src="http://res.cloudinary.com/dmyzysk4c/image/upload/c_fit,e_sharpen:20,h_100,w_100/{{ photo.public_id }}.jpg" itemprop="thumbnail" alt="Image description" />
+	                </a> 
+
+                  <figcaption itemprop="caption description">Image caption</figcaption>
+                </figure>
+
+		        {% endfor %}
+
+
+
+
+        </div>
+      </div>
+          
+    </div>
+{% endblock %}
