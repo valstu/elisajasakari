@@ -1,0 +1,9 @@
+{
+  "name": "elisajasakari.com",
+  "scripts": {
+    "start": "serve ./converted-html/ --single"
+  },
+  "dependencies": {
+    "serve": "^5.1.4"
+  }
+}
